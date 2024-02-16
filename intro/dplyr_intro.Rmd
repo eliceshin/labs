@@ -9,7 +9,7 @@ The learning curve for R syntax is slow. One of the more difficult aspects that 
 
 Take a look at the dataset we read in:
 ```{r}
-filename <- "femaleMiceWeights.csv"
+filename <- "C:/Users/ejs3323/Desktop/Github/dagdata/inst/extdata/femaleMiceWeights.csv"
 dat <- read.csv(filename)
 head(dat) #In R Studio use View(dat)
 ```
@@ -61,6 +61,9 @@ chowVals <- dat[ dat$Diet=="chow", colnames(dat)=="Bodyweight"]
 
 
 
-
+library(downloader)
+url="https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv"
+filename <- basename(url)
+download(url,filename)
 
 
